@@ -5968,14 +5968,22 @@ textarea.form-control-lg {
 }
 
 .carousel-caption {
-  position: absolute;
-  right: 15%;
-  bottom: 1.25rem;
-  left: 15%;
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-  color: #fff;
-  text-align: center;
+    position: absolute;
+    bottom: 20px; /* Ajusta la posición según sea necesario */
+    left: 15%; /* Asegúrate de que el texto esté centrado */
+    right: 15%;
+    color: #fff; /* Color del texto */
+    text-align: center; /* Centra el texto */
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar la legibilidad */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+@media (max-width: 768px) {
+    .carousel-caption {
+        font-size: 14px; /* Ajusta el tamaño de fuente para móviles */
+        bottom: 10px; /* Ajusta la posición en pantallas pequeñas */
+    }
 }
 
 .carousel-dark .carousel-control-prev-icon,
@@ -6064,6 +6072,9 @@ textarea.form-control-lg {
   --bs-offcanvas-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 }
 
+
+
+
 @media (max-width: 575.98px) {
   .offcanvas-sm {
     position: fixed;
@@ -6151,6 +6162,15 @@ textarea.form-control-lg {
     background-color: transparent !important;
   }
 }
+
+@media (max-width: 767.98px) {
+  .offcanvas-sm, .offcanvas-md {
+    visibility: visible; /* Asegúrate de que sea visible */
+    opacity: 1; /* Asegúrate de que no esté oculto */
+    transition: transform 0.3s ease-in-out; /* Mantén la transición */
+  }
+}
+
 
 @media (max-width: 767.98px) {
   .offcanvas-md {
