@@ -5971,7 +5971,7 @@ textarea.form-control-lg {
 
 .carousel-caption {
     position: absolute;
-    bottom: 20px; /* Ajusta la posición según sea necesario */
+    bottom: 35px; /* Ajusta la posición según sea necesario */
     left: 15%; /* Asegúrate de que el texto esté centrado */
     right: 15%;
     color: #fff; /* Color del texto */
@@ -11048,4 +11048,8 @@ p {
 
 .address strong {
   font-size: 1.2rem;
+}
+
+.oculto {
+  display: none; /* El texto no ocupará espacio en el diseño */
 }
