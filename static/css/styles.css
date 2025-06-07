@@ -11053,3 +11053,11 @@ p {
 .oculto {
   display: none; /* El texto no ocupará espacio en el diseño */
 }
+
+.hidden-text {
+  display: none; /* Oculta el texto */
+}
+
+#about:hover .hidden-text {
+  display: block; /* Muestra el texto al pasar el mouse */
+}
