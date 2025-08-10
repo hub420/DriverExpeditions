@@ -11085,3 +11085,7 @@ div {
   display: block; /* Asegura que el padding y el border se incluyan en el ancho y alto total del elemento */
   box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el ancho y alto total del elemento */
 }
+
+html {
+    scroll-behavior: smooth;
+}
