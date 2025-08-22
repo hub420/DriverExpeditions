@@ -11089,3 +11089,133 @@ div {
 html {
     scroll-behavior: smooth;
 }
+
+/*Para la seccion de comentarios
+.comment-item {
+    border-left: 3px solid #007bff !important;
+    transition: all 0.3s ease;
+}
+
+.comment-item:hover {
+    background-color: #f8f9fa !important;
+    transform: translateX(5px);
+}
+
+.comment-avatar {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.star-rating {
+    color: #ffc107;
+    font-size: 1.1em;
+}
+
+.comment-item.new-comment {
+    background-color: #d4edda !important;
+    border-color: #28a745 !important;
+}*/
+
+
+/*        */
+.comments-section{
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
+  min-height:100vh;
+  padding:40px 0;
+}
+
+.comment-card{
+  background:rgba(255,255,255,0.95);
+  border-radius:15px;backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,0.2);
+  transition:all 0.3s ease;margin-bottom:20px;
+}
+
+.comment-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 15px 35px rgba(0,0,0,0.1);
+}
+
+.form-container{
+  background:rgba(255,255,255,0.9);
+  border-radius:20px;
+  backdrop-filter:blur(15px);
+  border:1px solid rgba(255,255,255,0.3);
+  padding:30px;
+  margin-bottom:40px;
+}
+
+.btn-submit{
+  background:linear-gradient(45deg,#667eea,#764ba2);
+  border:none;
+  border-radius:25px;
+  padding:12px 30px;
+  font-weight:600;transition:all 0.3s ease;
+}
+
+.btn-submit:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 25px rgba(102,126,234,0.4);
+}
+
+.rating-stars{
+  color:#ffc107;
+  margin:10px 0;
+}
+
+.comment-author{
+  font-weight:600;
+  color:#667eea;
+}
+
+.comment-date{
+  color:#6c757d;
+  font-size:0.9em;
+}
+
+.loading-spinner{
+  border:3px solid #f3f3f4;
+  border-top:3px solid #667eea;
+  border-radius:50%;
+  width:30px;
+  height:30px;
+  animation:spin 1s linear infinite;
+  margin:0 auto;
+} 
+
+@keyframes spin{
+  0%{transform:rotate(0deg);
+  }
+  100%{transform:rotate(360deg);
+  }
+}
+
+.star-rating{
+  display:flex;
+  gap:5px;
+  margin:15px 0;
+}
+
+.star{cursor:pointer;
+  font-size:1.5em;
+  color:#ddd;
+  transition:color 0.3s ease;
+}
+
+.star.active,.star:hover{
+  color:#ffc107;
+}
+
+.alert-custom{
+  border-radius:15px;
+  border:none;
+  backdrop-filter:blur(10px);
+}
