@@ -516,134 +516,136 @@ Ideal for those seeking more than just arrival, preferring to travel understandi
        
        
     <!-- Reemplaza tu sección de comentarios con este código -->
-    <div class="comments-section" id="comments-section">
-            <div class="container">
-                <!-- Main Title -->
-                <div class="text-white mb-5">
-                    <h1 class="display-4 fw-bold mb-3">
-                        <i class="fas fa-comments me-3"></i>Comments & Reviews
-                    </h1>
-                    <p class="lead">Share your experience with our services</p>
-                </div>
+   
+<div class="comments-section" id="comments-section">
+    <div class="container">
+        <!-- Main Title -->
+        <div class="text-white mb-5">
+            <h1 class="display-4 fw-bold mb-3">
+                <i class="fas fa-comments me-3"></i>Comments & Reviews
+            </h1>
+            <p class="lead">Share your experience with our services</p>
+        </div>
 
-                <!-- Comment Form -->
-                <div class="form-container">
-                    <h3 class="mb-4 text-center text-dark">
-                        <i class="fas fa-pen-alt me-2"></i>Leave Your Comment
-                    </h3>
+        <!-- Comment Form -->
+        <div class="form-container">
+            <h3 class="mb-4 text-center text-dark">
+                <i class="fas fa-pen-alt me-2"></i>Leave Your Comment
+            </h3>
+            
+            <!-- Message Area -->
+            <div id="messageArea" class="mb-3"></div>
+            
+            <form id="commentForm"> <!-- ✅ CAMBIADO: de "comments" a "commentForm" -->
+                <div class="row">
+                    <!-- Name Field -->
+                    <div class="col-md-6 mb-3">
+                        <label for="userName" class="form-label text-dark">
+                            <i class="fas fa-user me-2"></i>Name *
+                        </label>
+                        <input 
+                            type="text" 
+                            class="form-control" 
+                            id="userName" 
+                            name="userName" 
+                            required 
+                            maxlength="50" 
+                            placeholder="Enter your name" 
+                            autocomplete="name"
+                        >
+                    </div>
                     
-        <form id="comments">
-            <div class="row">
-                <!-- Name Field -->
-                <div class="col-md-6 mb-3">
-                    <label for="userName" class="form-label text-dark">
-                        <i class="fas fa-user me-2"></i>Name *
-                    </label>
-                    <input 
-                        type="text" 
-                        class="form-control" 
-                        id="userName" 
-                        name="userName" 
-                        required 
-                        maxlength="50" 
-                        placeholder="Enter your name" 
-                        autocomplete="name"
-                    >
+                    <!-- Email Field -->
+                    <div class="col-md-6 mb-3">
+                        <label for="userEmail" class="form-label text-dark">
+                            <i class="fas fa-envelope me-2"></i>Email *
+                        </label>
+                        <input 
+                            type="email" 
+                            class="form-control" 
+                            id="userEmail" 
+                            name="userEmail"
+                            required
+                            maxlength="100" 
+                            placeholder="your@email.com"
+                            autocomplete="email"
+                        >
+                    </div>
                 </div>
                 
-                <!-- Email Field -->
-                <div class="col-md-6 mb-3">
-                    <label for="userEmail" class="form-label text-dark">
-                        <i class="fas fa-envelope me-2"></i>Email
+                <!-- Star Rating -->
+                <div class="mb-3" id="ratingSection">
+                    <label for="ratingLabel" class="form-label text-dark" id="ratingLabel">
+                        <i class="fas fa-star me-2"></i>Rating *
                     </label>
-                    <input 
-                        type="email" 
+                    <div class="star-rating" role="radiogroup" aria-labelledby="ratingLabel">
+                        <span class="star" data-rating="1" role="radio" tabindex="0" aria-label="1 star" style="font-size: 2rem; color: #6c757d; cursor: pointer;">★</span>
+                        <span class="star" data-rating="2" role="radio" tabindex="0" aria-label="2 stars" style="font-size: 2rem; color: #6c757d; cursor: pointer;">★</span>
+                        <span class="star" data-rating="3" role="radio" tabindex="0" aria-label="3 stars" style="font-size: 2rem; color: #6c757d; cursor: pointer;">★</span>
+                        <span class="star" data-rating="4" role="radio" tabindex="0" aria-label="4 stars" style="font-size: 2rem; color: #6c757d; cursor: pointer;">★</span>
+                        <span class="star" data-rating="5" role="radio" tabindex="0" aria-label="5 stars" style="font-size: 2rem; color: #6c757d; cursor: pointer;">★</span>
+                    </div>
+                    <input type="hidden" id="userRating" name="userRating" value="" required>
+                    <small class="text-muted">Click on the stars to rate</small>
+                </div>
+                
+                <!-- Comment Field -->
+                <div class="mb-3">
+                    <label for="userComment" class="form-label text-dark">
+                        <i class="fas fa-comment-dots me-2"></i>Your Comment *
+                    </label>
+                    <textarea 
                         class="form-control" 
-                        id="userEmail" 
-                        name="userEmail"
-                        maxlength="100" 
-                        placeholder="your@email.com"
-                        autocomplete="email"
-                    >
+                        id="userComment" 
+                        name="userComment"
+                        rows="4" 
+                        required 
+                        maxlength="500" 
+                        placeholder="Tell us about your experience..."
+                        autocomplete="off"
+                    ></textarea>
+                    <div class="form-text">Maximum 500 characters</div>
                 </div>
-            </div>
-            
-            <!-- Star Rating -->
-           <div class="mb-3" id="ratingSection">
-                <label for="ratingLabel" class="form-label text-dark" id="ratingLabel">
-                    <i class="fas fa-star me-2"></i>Rating *
-                </label>
-                <div class="star-rating" role="radiogroup" aria-labelledby="ratingLabel">
-                    <span class="star" data-rating="1" role="radio" tabindex="0" aria-label="1 star">★</span>
-                    <span class="star" data-rating="2" role="radio" tabindex="0" aria-label="2 stars">★</span>
-                    <span class="star" data-rating="3" role="radio" tabindex="0" aria-label="3 stars">★</span>
-                    <span class="star" data-rating="4" role="radio" tabindex="0" aria-label="4 stars">★</span>
-                    <span class="star" data-rating="5" role="radio" tabindex="0" aria-label="5 stars">★</span>
+                
+                <!-- Submit Button -->
+                <div class="text-center">
+                    <button type="submit" class="btn btn-submit text-white" id="submitBtn">
+                        <i class="fas fa-paper-plane me-2"></i>Submit Comment
+                    </button>
                 </div>
-                <input type="hidden" id="userRating" name="userRating" value="" required>
-                <small class="text-muted">Click on the stars to rate</small>
-            </div>
-            
-            <!-- Comment Field -->
-            <div class="mb-3">
-                <label for="userComment" class="form-label text-dark">
-                    <i class="fas fa-comment-dots me-2"></i>Your Comment *
-                </label>
-                <textarea 
-                    class="form-control" 
-                    id="userComment" 
-                    name="userComment"
-                    rows="4" 
-                    required 
-                    maxlength="500" 
-                    placeholder="Tell us about your experience..."
-                    autocomplete="off"
-                ></textarea>
-                <div class="form-text">Maximum 500 characters</div>
-            </div>
-            
-            <!-- Submit Button -->
-            <div class="text-center">
-                <button type="submit" class="btn btn-submit text-white" id="submitBtn">
-                    <i class="fas fa-paper-plane me-2"></i>Submit Comment
-                </button>
-            </div>
-        </form>
-                </div>
+            </form>
+        </div>
 
-                <!-- Message Area -->
-                <div id="messageArea"></div>
-
-                <!-- Comments Section -->
-                <div class="comment-card">
-                    <div class="card-header bg-transparent">
-                        <h4 class="mb-0 text-center text-dark">
-                            <i class="fas fa-comments me-2"></i>Customer Comments
-                            <span class="badge bg-primary ms-2" id="commentCount">0</span>
-                        </h4>
-                    </div>
-                    
-                    <div class="card-body">
-                        <!-- Loading -->
-                        <div id="loadingComments" class="text-center py-4">
-                            <div class="loading-spinner"></div>
-                            <p class="mt-3 text-muted">Loading comments...</p>
-                        </div>
-                        
-                        <!-- Comments List -->
-                        <div id="commentsList">
-                            <!-- Comments will be loaded here dynamically -->
-                        </div>
-                        
-                        <!-- No Comments Message -->
-                        <div id="noComments" class="text-center py-5" style="display: none;">
-                            <i class="fas fa-comment-slash fa-3x text-muted mb-3"></i>
-                            <p class="text-muted">No comments yet. Be the first to comment!</p>
-                        </div>
-                    </div>
+        <!-- Comments Section -->
+        <div class="comment-card mt-5">
+            <div class="card-header bg-transparent">
+                <h4 class="mb-0 text-center text-dark">
+                    <i class="fas fa-comments me-2"></i>Customer Comments
+                    <span class="badge bg-primary ms-2" id="commentCount">0</span>
+                </h4>
+            </div>
+            
+            <div class="card-body">
+                <!-- Loading -->
+                <div id="loadingComments" class="text-center py-4" style="display: none;">
+                    <div class="loading-spinner"></div>
+                    <p class="mt-3 text-muted">Loading comments...</p>
+                </div>
+                
+                <!-- Comments List -->
+                <div id="commentsList">
+                    <!-- Comments will be loaded here dynamically -->
+                </div>
+                
+                <!-- No Comments Message -->
+                <div id="noComments" class="text-center py-5" style="display: none;">
+                    <i class="fas fa-comment-slash fa-3x text-muted mb-3"></i>
+                    <p class="text-muted">No comments yet. Be the first to comment!</p>
                 </div>
             </div>
         </div>
+    </div>
+</div>
         
     </main>
 
@@ -656,7 +658,7 @@ Ideal for those seeking more than just arrival, preferring to travel understandi
 
     
     <!-- Scripts de Firebase al final del body -->
-    <script type="module" src="static/js/firebase-init.js"></script>
+    <script type="module" src="firebaseConfig.js"></script>
     <script type="module" src="static/js/comments.js"></script>
     <script type="module" src="static/js/scripts.js"></script>
 
